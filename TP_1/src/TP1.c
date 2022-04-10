@@ -95,6 +95,8 @@ int main(void) {
 		case 6:
 			printf("\nUsted eligio: Salir \n");
 			break;
+		default:
+			printf("\nOpcion incorrecta. Ingrese una opcion valida: ");
 		}
 
 	} while (opcion != 6);

@@ -74,18 +74,5 @@ void CargaForzada(float kilometros, float aerolineas, float latam, float debitoA
 
 }
 
-//void CalcularCostos(float* kilometros, float* aerolineas,float* latam, float* debitoAA ,float* debitoLTM, float* creditoAA, float* creditoLTM, float* bitcoinAA,
-//		float* bitcoinLTM,float* precioUnitarioAA, float* precioUnitarioLTM, float* diferenciaPrecio){
-//
-//				debitoAA = CalcularTarjetaDebito(aerolineas);
-//				*debitoLTM = CalcularTarjetaDebito(latam);
-//				*creditoAA = CalcularTarjetaCredito(aerolineas);
-//				*creditoLTM = CalcularTarjetaCredito(latam);
-//				*bitcoinAA = CalcularPrecioBitcoin(aerolineas);
-//				*bitcoinLTM = CalcularPrecioBitcoin(latam);
-//				*precioUnitarioAA = CalcularPrecioUnitario(aerolineas,kilometros);
-//				*precioUnitarioLTM = CalcularPrecioUnitario(latam,kilometros);
-//				*diferenciaPrecio = CalcularDiferenciaPrecio(latam,aerolineas);
-//
-//}
+
 
