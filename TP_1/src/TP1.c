@@ -62,15 +62,8 @@ int main(void) {
 				printf("\nError. No se puede calcular los costos sin haber ingresado\nlos precios de los vuelos\n");
 			}else{
 			printf("\nUsted eligio: Calcular costos\n");
-			debitoAA = CalcularTarjetaDebito(aerolineas);
-			debitoLTM = CalcularTarjetaDebito(latam);
-			creditoAA = CalcularTarjetaCredito(aerolineas);
-			creditoLTM = CalcularTarjetaCredito(latam);
-			bitcoinAA = CalcularPrecioBitcoin(aerolineas);
-			bitcoinLTM = CalcularPrecioBitcoin(latam);
-			precioUnitarioAA = CalcularPrecioUnitario(aerolineas,kilometros);
-			precioUnitarioLTM = CalcularPrecioUnitario(latam,kilometros);
-			diferenciaPrecio = CalcularDiferenciaPrecio(latam,aerolineas);
+			CalcularCostos(kilometros,aerolineas,latam,&debitoAA,&debitoLTM,&creditoAA,&creditoLTM,&bitcoinAA,&bitcoinLTM
+					,&precioUnitarioAA,&precioUnitarioLTM,&diferenciaPrecio);
 
 			flagCostos = 0;
 			if(flagCostos == 0){

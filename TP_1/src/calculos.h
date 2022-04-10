@@ -19,5 +19,5 @@ float CalcularTarjetaCredito(float);
 float CalcularPrecioBitcoin(float);
 float CalcularPrecioUnitario(float,float);
 float CalcularDiferenciaPrecio(float,float);
-
+void CalcularCostos(float,float,float,float*,float*,float*,float*,float*,float*,float*,float*,float*);
 #endif /* CALCULOS_H_ */
