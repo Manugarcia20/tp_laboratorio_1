@@ -8,6 +8,7 @@
 #ifndef MENU_H_
 #define MENU_H_
 
+/// @return retorna un menu de opciones.
 int menu();
 
 

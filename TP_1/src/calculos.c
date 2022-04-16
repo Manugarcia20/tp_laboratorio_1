@@ -69,6 +69,4 @@ void CalcularCostos(float kilometros ,float aerolineas ,float latam ,float*debit
 				*precioUnitarioLTM = CalcularPrecioUnitario(latam,kilometros);
 				*diferenciaPrecio = CalcularDiferenciaPrecio(latam,aerolineas);
 
-
-
 }

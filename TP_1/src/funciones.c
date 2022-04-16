@@ -28,7 +28,7 @@ void MostrarResultados(float debitoAA, float debitoLTM, float creditoAA,
 	printf("\nAerolineas: \n");
 	printf("\nEl precio con debito es: %2.f\n", debitoAA);
 	printf("\nEl precio con credito es: %2.f\n", creditoAA);
-	printf("\nEl precio con Bitcoin es: %f\n", bitcoinAA);
+	printf("\nEl precio con Bitcoin es: %f\n BTC", bitcoinAA);
 	printf("\nEl precio por kilometro es: %.2f\n", precioUnitarioAA);
 	printf("\nLatam: \n");
 	printf("\nEl precio con debito es: %2.f\n", debitoLTM);
