@@ -68,8 +68,8 @@ int MostrarListaPasajeros(ePasajero listaPasajeros[], int tam, eTipo tipoPasajer
 
 int OrdenarPasajerosPorApellidoYTipo(ePasajero listaPasajeros[], int tam, int orden);
 int TotalYPromedioPrecios(ePasajero listaPasajeros[], int tam);
-int OrdenarPorCodigoYEstado(ePasajero listaPasajeros[], int tam, int orden);
-
+int OrdenarPorCodigoYEstado(ePasajero listaPasajeros[], int tam, int orden, eTipo tipoPasajero[], int tamPas, eEstadoVuelo estadoVuelo[], int tamEstado);
+int hardcodearEmpleados(ePasajero *listaPasajeros, int tam, int *pId, eTipo tipoPasajero[], int tamPas, eEstadoVuelo estadoVuelo[], int tamEstado);
 
 
 

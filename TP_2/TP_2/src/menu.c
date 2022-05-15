@@ -19,7 +19,8 @@ int menu() {
 	printf("\n2 - MODIFICAR\n");
 	printf("\n3 - BAJA\n");
 	printf("\n4 - INFORMAR\n");
-	printf("\n5 - SALIR\n");
+	printf("\n5 - HARDCODEAR\n");
+	printf("\n6 - SALIR\n");
 
 	opcion = getValidInt("\nElija una opcion: ", "Error. Ingrese una opcion valida: ", 1,5);
 

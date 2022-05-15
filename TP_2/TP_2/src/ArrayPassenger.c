@@ -285,7 +285,7 @@ int AltaPasajero(ePasajero *listaPasajeros, int tam, int *pId, eTipo tipoPasajer
 		CargarDescripcionTipo(tipoPasajero, tam, unPasajero.idTipo, descTipo);
 		CargarDescripcionEstado(estadoVuelo,tam, unPasajero.idEstado, descEstado);
 
-		printf("%d          %s %s          %.2f         %s	    %10s      %10s  \n",    unPasajero.id,
+		printf("\n%d          %s %s          %.2f         %s	    %10s      %10s  \n",    unPasajero.id,
 															 	     unPasajero.nombre,
 																	 unPasajero.apellido,
 																  	 unPasajero.precio,
@@ -428,7 +428,7 @@ int AltaPasajero(ePasajero *listaPasajeros, int tam, int *pId, eTipo tipoPasajer
 	}
 
 
-	int OrdenarPorCodigoYEstado(ePasajero listaPasajeros[], int tam, int orden){
+	int OrdenarPorCodigoYEstado(ePasajero listaPasajeros[], int tam, int orden, eTipo tipoPasajero[], int tamPas, eEstadoVuelo estadoVuelo[], int tamEstado){
 
 		   ePasajero auxPasajero;
 
@@ -479,11 +479,63 @@ int AltaPasajero(ePasajero *listaPasajeros, int tam, int *pId, eTipo tipoPasajer
 			            }
 			        }
 			    }
+
+			    for(int i = 0; i < tam; i++)
+			    {
+			    	if(listaPasajeros[i].isEmpty == 0 && listaPasajeros[i].idEstado == 1){
+			    		MostrarUnPasajero(listaPasajeros[i],tipoPasajero, estadoVuelo, tam, tamEstado);
+			    	}
+
+			    }
+
+
+
 			    return 0;
 			}
 
 
 
+
+	/////////////////////////////////////////////////////////////////////////////////
+
+
+	int hardcodearEmpleados(ePasajero *listaPasajeros, int tam, int *pId, eTipo tipoPasajero[], int tamPas, eEstadoVuelo estadoVuelo[], int tamEstado)
+	{
+
+	    int todoOk = 0;
+	    ePasajero auxHardcodeo[] =
+	    {
+	    		{1, "Juan", "Martinez" , 30000, "rtos3k", 5000, 1},
+				{1, "Ricardo", "Lopez" , 90000, "csf423", 5001, 2},
+				{1, "Julieta", "Gomez" , 86000, "scdfv5", 5002, 1},
+				{1, "Mabel",   "Diaz"  , 48000, "awerf2", 5000, 1},
+				{1, "Matias", "Benitez" ,25000, "4gds7k", 5002, 3},
+
+	    };
+
+	    if(listaPasajeros!= NULL && tam > 0 && pId != NULL && tipoPasajero != NULL && tamPas > 0 && estadoVuelo != NULL && tamEstado > 0)
+	    {
+
+	        for(int i=0; i < tam; i++)
+	        {
+	            listaPasajeros[i] = auxHardcodeo[i];
+	            listaPasajeros[i].id = *pId;
+	            *pId = *pId +1;
+	        }
+
+
+	        for(int i = 0; i < tam; i++){
+
+	        MostrarUnPasajero(listaPasajeros[i],tipoPasajero,estadoVuelo,tamPas, tamEstado);
+	        }
+
+
+
+	        todoOk = 1;
+	    }
+	    return todoOk;
+
+	}
 
 
 

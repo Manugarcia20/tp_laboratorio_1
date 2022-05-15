@@ -79,8 +79,12 @@ int main(void) {
 				break;
 			case 4:
 				printf("\nUsted eligio: INFORMAR\n");
+
 				MostrarListaPasajeros(listaPasajeros,TAM, tipoPasajero, TAM_T,estadoVuelo, TAM_E);
+
 				informes = subMenuInformes();
+
+
 				switch(informes){
 				case 1:
 					printf("\nUsted eligio: LISTADO DE PASAJEROS ORDENADOS ALFABETICAMENTE POR APELLIDO Y TIPO DE PASAJERO/n");
@@ -96,18 +100,24 @@ int main(void) {
 					break;
 				case 3:
 					printf("\nUsted eligio: ORDENAR POR CODIGO DE VUELO  Y ESTADO DE VUELO\n ");
-					OrdenarPorCodigoYEstado(listaPasajeros, TAM ,orden);
+					OrdenarPorCodigoYEstado(listaPasajeros, TAM ,orden,tipoPasajero, TAM_T, estadoVuelo,TAM_E);
 					break;
 				case 4:
 					printf("\nSalir");
 					break;
-
 				default:
 					printf("\nOpcion incorrecta. Ingrese una opcion valida: ");
 					break;
 				}
 				break;
-			case 5:
+
+				case 5:
+				printf("\nUSTED ELIGIO: HARDCODEAR");
+				hardcodearEmpleados(listaPasajeros,TAM, &pId,tipoPasajero,TAM_T,estadoVuelo,TAM_E);
+
+				break;
+
+			case 6:
 				printf("\nUsted eligio: SALIR\n");
 				break;
 			default:
@@ -115,7 +125,7 @@ int main(void) {
 				break;
 			}
 
-		} while (opcion != 5);
+		} while (opcion != 6);
 
 
 
