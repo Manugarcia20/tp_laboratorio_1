@@ -482,7 +482,7 @@ int AltaPasajero(ePasajero *listaPasajeros, int tam, int *pId, eTipo tipoPasajer
 
 			    for(int i = 0; i < tam; i++)
 			    {
-			    	if(listaPasajeros[i].isEmpty == 0 && listaPasajeros[i].idEstado == 1){
+			    	if(listaPasajeros[i].isEmpty == 1 && listaPasajeros[i].idEstado == 1){
 			    		MostrarUnPasajero(listaPasajeros[i],tipoPasajero, estadoVuelo, tam, tamEstado);
 			    	}
 
