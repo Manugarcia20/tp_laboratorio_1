@@ -38,7 +38,7 @@ int subMenuModificar(){
 		printf("\n3 - PRECIO DEL VUELO\n");
 		printf("\n4 - CODIGO DE VUELO\n");
 		printf("\n5 - TIPO DE PASAJERO\n");
-		printf("\n5 - ESTADO DE VUELO\n");
+		printf("\n6 - ESTADO DE VUELO\n");
 		printf("\n6 - SALIR\n");
 
 

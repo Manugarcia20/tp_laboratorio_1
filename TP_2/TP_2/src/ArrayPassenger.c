@@ -134,6 +134,7 @@ int AltaPasajero(ePasajero *listaPasajeros, int tam, int *pId, eTipo tipoPasajer
 		int subMenu;
 		int indexPasajeroCambio;
 		int nuevoTipo;
+		int nuevoEstado;
 		char respuesta;
 
 
@@ -184,6 +185,12 @@ int AltaPasajero(ePasajero *listaPasajeros, int tam, int *pId, eTipo tipoPasajer
 									 listaPasajeros->idTipo = nuevoTipo;
 									break;
 								case 6:
+									printf("\nUsted eligio: MODIFICAR ESTADO DE VUELO\n");
+									listarEstados(estadoVuelo,tamEstado);
+									nuevoEstado = getValidInt("\nIngrese el id del nuevo estado de vuelo: " , "\nError, ingrese un id valido: ",1,3);
+									listaPasajeros->idEstado = nuevoEstado;
+									break;
+								case 7:
 									printf("\nUsted eligio: SALIR\n");
 									break;
 								default:

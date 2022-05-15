@@ -32,6 +32,9 @@ int main(void) {
 	int IdPasajeroBaja;
 	int IdPasajeroCambio;
 	int pId = 1;
+	int flagAlta = 0;
+
+
 
 	ePasajero listaPasajeros[TAM];
 	eTipo tipoPasajero[TAM_T] =
@@ -58,28 +61,48 @@ int main(void) {
 			switch (opcion) {
 			case 1:
 				printf("\nUsted eligio: ALTA\n");
+
 				if(AltaPasajero(listaPasajeros,TAM, &pId,tipoPasajero, TAM_T, estadoVuelo, TAM_E)){
 					printf("\n*** PASAJERO CARGADO CON EXITO ***");
+					flagAlta = 1;
 				}else{
 					printf("\n*** HUBO UN PROBLEMA AL CARGAR EL PASAJAJERO ***");
 				}
-
 				break;
+
 			case 2:
 				printf("\nUsted eligio: MODIFICAR\n");
+
+				if(flagAlta == 1)
+				{
+
 				if(ModificarPasajeros(listaPasajeros,TAM,IdPasajeroCambio,tipoPasajero,TAM_T,estadoVuelo, TAM_E) == 0){
 					printf("\nModificacion Exitosa");
 				}
+				}else
+				{
+					printf("\nNo se puede modificar sin antes cargar un pasajero");
+				}
 				break;
+
 			case 3:
 				printf("\nUsted eligio: BAJA\n");
-				if(BajaPasajero(listaPasajeros,TAM,IdPasajeroBaja, tipoPasajero, TAM_T,estadoVuelo, TAM_E) == 0){
+				if(flagAlta == 1)
+				{
+				if(BajaPasajero(listaPasajeros,TAM,IdPasajeroBaja, tipoPasajero, TAM_T,estadoVuelo, TAM_E) == 0)
+				{
 					printf("\nBAJA EXITOSA");
+				}
+				}
+				else
+				{
+					printf("\nNo se puede dar de baja sin antes cargar un pasajero");
 				}
 				break;
 			case 4:
 				printf("\nUsted eligio: INFORMAR\n");
 
+				if(flagAlta == 1){
 				MostrarListaPasajeros(listaPasajeros,TAM, tipoPasajero, TAM_T,estadoVuelo, TAM_E);
 
 				informes = subMenuInformes();
@@ -108,6 +131,10 @@ int main(void) {
 				default:
 					printf("\nOpcion incorrecta. Ingrese una opcion valida: ");
 					break;
+				}
+				}else
+				{
+					printf("\nNo se puede informar nada sin antes ingresar un pasajero");
 				}
 				break;
 
